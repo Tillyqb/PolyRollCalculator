@@ -9,11 +9,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/polycalculator")
 public class PolyRollController {
     @GetMapping
-    public Integer getRollLength(@RequestParam Double thickness, @RequestParam Double coreOD, @RequestParam Double rollOD)
+    public Integer getRollLength(@RequestParam Double thickness, @RequestParam Double coreOD, @RequestParam Double rollOD, @RequestParam Double pi)
     {
         Integer rollLength = 0;
-
-        /*rollLength = (int) ((((rollOD * 3.141592654) + (coreOD * 3.141592654)) / 2) * ((rollOD - coreOD) / thickness));*/
+        pi = 3.141592654;
         rollOD/=2;
         rollOD*=rollOD;
 
@@ -21,7 +20,7 @@ public class PolyRollController {
         coreOD*=coreOD;
 
         rollOD-=coreOD;
-        rollOD*=3.14195;
+        rollOD*=pi;
 
         rollLength = (int) (rollOD/thickness);
 
