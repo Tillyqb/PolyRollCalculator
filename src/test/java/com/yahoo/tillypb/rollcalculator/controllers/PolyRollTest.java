@@ -18,8 +18,8 @@ public class PolyRollTest
     @Test
     public void testGetRollLength()
     {
-        Integer actual = testController.getRollLength(4.5, 3.625, 25.125);
-        Integer expected = 9000;
+        Integer actual = testController.getRollLength(.0045, 3.625, 25.125);
+        Integer expected = 107895;
 
         Assert.assertEquals(expected, actual);
     }
@@ -27,8 +27,8 @@ public class PolyRollTest
     @Test
     public void testGetRollLengthAlternateValues()
     {
-        Integer actual = testController.getRollLength(6.0, 6.625, 21.8);
-        Integer expected = 4500;
+        Integer actual = testController.getRollLength(.0060, 6.625, 21.8);
+        Integer expected = 56469;
 
         Assert.assertEquals(expected, actual);
     }
