@@ -36,4 +36,10 @@ public class PolyRollControllerIntigrarionTest
     {
         mvc.perform(MockMvcRequestBuilders.get("/polycalculator?thickness=tron&coreOD=900&rollOD=23")).andExpect(MockMvcResultMatchers.status().isBadRequest());
     }
+
+    @Test
+    public void returnHttpBadRequestWhenCoreODIsGreaterThanRollOD() throws Exception
+    {
+        mvc.perform(MockMvcRequestBuilders.get("/polycalculator?thickness=.0045&coreOD=21&rollOD=6.625")).andExpect(MockMvcResultMatchers.status().isBadRequest());
+    }
 }
