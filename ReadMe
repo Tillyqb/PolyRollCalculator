@@ -1,0 +1,5 @@
+Poly Roll Controller 0.1
+
+Thank you for using this piece of software.  It is intended to calculate the length of a roll of material given the outer diameter of the roll (RollOD), the outer diameter of the core (CoreOD), and the thickness of the material (Thickness).
+
+If you use this software with your own, please include credit to TillyQB.
